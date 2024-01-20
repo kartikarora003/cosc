@@ -1,12 +1,11 @@
 <html>
 <head>
-    <title>Styled HTML Form</title>
+    <title>Professional HTML Form</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
-            padding: 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -15,23 +14,28 @@
 
         form {
             background-color: #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
         }
 
         label {
             display: block;
+            font-size: 14px;
             margin-bottom: 8px;
+            color: #333;
         }
 
         input, select, textarea {
             width: 100%;
-            padding: 8px;
+            padding: 12px;
             margin-bottom: 16px;
             box-sizing: border-box;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 14px;
         }
 
         textarea {
@@ -39,30 +43,35 @@
         }
 
         input[type="submit"] {
-            background-color: #4caf50;
+            background-color: #3498db;
             color: #fff;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #007bb5;
         }
     </style>
 </head>
 <body>
 
     <form action="#" method="post">
-        <label for="name">Name:</label>
+        <h2 style="text-align: center; color: #333;">Contact Us</h2>
+
+        <label for="name">Your Name:</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
+        <label for="email">Your Email:</label>
         <input type="email" id="email" name="email" required>
 
-        <label>Gender:</label>
-        <label for="male">Male</label>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="female">Female</label>
-        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="gender">Gender:</label>
+        <div style="display: flex; margin-bottom: 16px;">
+            <label for="male" style="margin-right: 20px;">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female" style="margin-left: 20px;">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+        </div>
 
         <label for="subject">Subject:</label>
         <select id="subject" name="subject" required>
@@ -72,7 +81,7 @@
             <option value="support">Support</option>
         </select>
 
-        <label for="message">Message:</label>
+        <label for="message">Your Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
 
         <input type="submit" value="Submit">
